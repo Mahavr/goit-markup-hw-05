@@ -107,7 +107,7 @@ button {
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.04px;
+  letter-spacing: 0.04em;
   padding: 16px 32px;
   cursor: pointer;
   border-radius: 4px;
@@ -452,11 +452,7 @@ button {
 .footer-wrap {
   margin-right: 120px;
 }
-.footer-input-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
+
 .flb {
   display: inline-block;
   margin-bottom: 16px;
@@ -481,15 +477,17 @@ button {
   background-color: var(--success-color);
 }
 .dist {
-  /* display: flex;
-  gap: 24px;
-  align-items: flex-end; */
 }
 
+.footer-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 .dist-label {
 }
 .dist-input {
-  padding: 8px 16px;
+  padding-left: 16px;
   width: 264px;
   height: 40px;
   outline: transparent;
@@ -500,8 +498,8 @@ button {
 
   color: var(--white-background);
   font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.48px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 .dist-input::placeholder {
   color: inherit;
@@ -739,14 +737,18 @@ button {
   fill: var(--primary-brand);
 }
 .modal-form-comment {
-  margin-bottom: 13px;
+  margin-bottom: 16px;
 }
 .modal-comment {
   resize: none;
-
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   height: 120px;
   padding: 8px 16px;
 }
+
 .modal-comment::placeholder {
   color: rgba(46, 47, 66, 0.4);
 
@@ -754,7 +756,7 @@ button {
 
   font-weight: 400;
   line-height: 1.17;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04px;
 }
 .modal-chek-wrapper {
   margin-bottom: 24px;
@@ -789,7 +791,7 @@ input[type="checkbox"]:checked ~ .modal-form-desc > .agreement-checkbox {
   color: var(--subtitle-text);
   display: block;
   font-size: 12px;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
 }
 .modal-form-link {
@@ -800,5 +802,4 @@ input[type="checkbox"]:checked ~ .modal-form-desc > .agreement-checkbox {
 .modal-button {
   margin-left: auto;
   margin-right: auto;
-  
 }
