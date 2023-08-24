@@ -102,15 +102,16 @@ button {
   background-color: var(--primary-brand);
 
   color: var(--white-background);
-
+  font-family: var(--main-text);
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04px;
   padding: 16px 32px;
   cursor: pointer;
   border-radius: 4px;
+  border: none;
   display: block;
   min-width: 169px;
   height: 56px;
@@ -451,10 +452,16 @@ button {
 .footer-wrap {
   margin-right: 120px;
 }
+.footer-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 .flb {
   display: inline-block;
   margin-bottom: 16px;
 }
+
 .footer-socials {
   margin-right: 80px;
 }
@@ -474,17 +481,11 @@ button {
   background-color: var(--success-color);
 }
 .dist {
-  display: flex;
+  /* display: flex;
   gap: 24px;
-  align-items: flex-end;
+  align-items: flex-end; */
 }
-.dist-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
+
 .dist-label {
 }
 .dist-input {
@@ -637,7 +638,7 @@ button {
   transition: transform 400ms linear;
   /* transition: transform var(--transition); */
 
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 
   border-radius: 4px;
   background-color: var(--modal-background);
@@ -680,7 +681,7 @@ button {
 }
 .modal-caption {
   display: block;
-  margin-top: 48px;
+
   margin-bottom: 16px;
   color: var(--dark-color);
   text-align: center;
@@ -701,44 +702,50 @@ button {
 
   color: var(--subtitle-text);
   font-size: 12px;
-  font-weight: 400;
+
   line-height: 1.17;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04em;
 }
 .modal-item {
-  position: relative;
   margin-bottom: 8px;
+}
+.modal-input-wrapper {
+  position: relative;
 }
 .modal-input {
   width: 100%;
+  height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   outline: transparent;
   background-color: transparent;
   transition: border-color var(--transition);
-  padding: 8px 16px;
+
   padding-left: 38px;
 }
 .modal-input:focus {
-  border: 1px solid var(--primary-brand);
+  border-color: var(--primary-brand);
 }
 .modal-form-icons {
   fill: var(--hero-background);
   position: absolute;
-  left: 0;
+  left: 16px;
   top: 50%;
-  transform: translateX(16px) translateY(-50%);
+  transform: translateY(-50%);
   pointer-events: none;
+  transition: fill var(--transition);
 }
 .modal-input:focus + .modal-form-icons {
   fill: var(--primary-brand);
 }
-.modal-form-comment{
+.modal-form-comment {
   margin-bottom: 13px;
 }
 .modal-comment {
   resize: none;
-  padding-left: 16px;
+
+  height: 120px;
+  padding: 8px 16px;
 }
 .modal-comment::placeholder {
   color: rgba(46, 47, 66, 0.4);
@@ -748,6 +755,9 @@ button {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.48px;
+}
+.modal-chek-wrapper {
+  margin-bottom: 24px;
 }
 .modal-agreement {
 }
@@ -761,35 +771,34 @@ button {
 
   width: 16px;
   height: 16px;
-  margin-right: 8px;
+
   color: transparent;
-  border-radius: 3px;
+  border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color var(--transition), border-color var(--transition),
-    color var(--transition);
+  fill: transparent;
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
 }
-input[type="checkbox"]:checked + .agreement-checkbox {
+input[type="checkbox"]:checked ~ .modal-form-desc > .agreement-checkbox {
   background-color: var(--pressed-state);
-  border-color: var(--pressed-state);
-  color: var(--white-background);
+  border: none;
+  fill: var(--light-color);
 }
-.modal-form-agree-icon {
-  fill: currentColor;
-}
+
 .modal-form-desc {
   color: var(--subtitle-text);
-
+  display: block;
   font-size: 12px;
   line-height: 1.17px;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04em;
 }
 .modal-form-link {
   color: var(--primary-brand);
 
-text-decoration-line: underline;
+  text-decoration-line: underline;
 }
-.modal-button{
-  margin-top: 24px;
+.modal-button {
   margin-left: auto;
   margin-right: auto;
+  
 }
